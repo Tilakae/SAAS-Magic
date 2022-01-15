@@ -1,0 +1,102 @@
+@import'config';
+@import'home';
+@import'menu';
+@import'about';
+@import'projects';
+@import'contacts';
+@import'responsive';
+@function weghts($weight-name){
+    @return map-get($fontweights, $weight-name );
+}
+@mixin transition_ease {
+    transition: all 0.5s ease-in-out;
+}
+a.back-to-top {
+	position: fixed;
+	z-index: 999;
+	right: 12px;
+	bottom: 12px;
+	display: none;
+	width: 42px;
+	height: 42px;
+	border-radius: 30px;
+	background: #3a424d url("arrow_to_top.png") no-repeat center 47%;
+	background-size: 18px 18px;
+	text-indent: -9999px;
+}
+
+a:hover.back-to-top {
+	background-color: #0b36a8;
+}
+
+body{
+    background-color: $pcolor;
+    color: set-text-color($pcolor);
+    height: 100vh;
+    font-family: 'Poppins';
+    line-height: 2;
+}
+h1,h2,h3{
+    font-weight: weghts(semibold);
+}
+a{
+    text-decoration: none;
+}
+.text-secondary{
+    color: $scolor;
+}
+header{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem;
+}
+main{
+    height: 100%;
+    width: 100%;
+    
+    .social-medias{
+        position: fixed;
+        bottom: 3.8rem;
+        left: 0rem;
+        display:grid;
+        grid-template-columns: 1fr;
+        gap: .5rem;
+        
+        a{
+            padding: .8rem;
+            @include transition_ease;
+            float: left;
+        }
+        & a:hover{
+            color: $scolor;
+        }
+    }
+}
+footer{
+    position: fixed;
+    font-size: $normal;
+    bottom: 2.4rem;
+    right: .5rem;
+    text-align: right;
+    padding: $smaller;
+    color: set-text-color($pcolor);
+}
+.fa-stack .fa-stack-1x {
+    color: set-text-color($pcolor);
+	transition: all 0.2s ease;
+    font-size: $normal;
+    padding-left: .8rem;
+    top: 0;
+    bottom: 1.4rem;
+    right: 1rem;
+    text-align: justify;
+    padding: $smaller;
+    color: white;
+}
+.fa-stack .fa-stack-1x:hover {
+    color: $scolor;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.5s ease-in-out;
+  }
+  

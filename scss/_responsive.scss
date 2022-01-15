@@ -1,0 +1,121 @@
+@include media-md{
+    .menu-btn{
+        visibility: hidden;
+    }
+    .nav{
+        visibility: visible;
+        .menu-nav{
+            display: block;
+            transform: translateY(0);
+            height: 100%;
+            background-color: transparent;
+            text-align: right;
+            &__item{
+                display: inline;
+                padding-right: 1.5rem;}
+                &__link{
+                    font-size: 1.5rem;
+                }
+            
+        }
+    }
+.about__bio{
+    font-size: 1.5rem;
+}
+.projects{
+    &__bio-image{
+        height: 40vh;
+    }
+    &__items{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .text-secondary{
+        font-size: 3rem;
+    }
+   
+}
+}
+
+@include media-mc{
+    .projects{
+        &__items{
+            grid-template-columns: repeat(3,1fr);
+            &img{
+                height: 10rem;
+            }
+        }
+        
+    }
+    .contact__list{
+        grid-template-columns: repeat(1,2fr);
+    }
+}
+@include media-mb{
+    .projects__bio-image{
+        height: 60vh;
+    }
+}
+@include media-small{
+    .home{
+        &__name{
+            font-size: $large;
+                  }
+    &h2{
+        font-size: &medium;
+    }
+    &.social-medias{
+        transform: rotate(0deg) translate(1rem,-3rem);
+        margin-left: 0;
+    }
+                }
+                .about{
+                    margin-top: 50 vh;
+
+                    &__bio-image{
+                        margin-top: 50 vh;
+                        p{
+
+                            margin-left: 8rem;
+                            margin-right: 8rem;
+                            text-align: justify;
+                            width: 60%;
+                        }
+
+                    }
+                }
+                .contact{
+                    width: 60%;
+                        margin-left: 3rem;
+                        margin-right: 0rem;
+                        &h1,h2,h3{
+                            font-size: $normal;
+                        }
+                   &.contact__list{
+                       font-size: $smaller;
+                       width: 100%;
+                       margin-left: 2rem;
+                       margin-right: 2rem;
+                   }
+                   .contact__address{
+                       margin-left: 3rem;
+                       &.text-secondary{
+                           text-align: center;
+                           justify-content: center;
+                           display: flex;
+                           word-break: break-all;
+
+                           
+                       }
+                   }
+                   .com-gmail{
+                       word-break: break-all;
+
+                   }
+                   .contact__phone{
+                       margin-left: 3rem;
+                   }
+                   #email{
+                       font-size: .8rem;
+                   }
+                
+}}

@@ -1,0 +1,30 @@
+.contact{
+    height: 100%;
+    padding-top: 30vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient( to right, rgba($pcolor,0.9),rgba($pcolor,0.3)),
+     url(../IMG/MODEL.webp) center top;
+    background-size: cover;
+    h2{
+        font-size: $large;
+        margin-bottom: 2rem;
+
+    }
+    &__list{
+        display: grid;
+        grid-gap: 2rem;
+        font-size: 1.2rem;
+        // align-content: stretch;
+        // align-items: start;
+        // justify-items: center;
+        // justify-content: start;
+          &.contact__email{
+            margin-left: 3rem;
+        }
+        
+    }
+    
+}

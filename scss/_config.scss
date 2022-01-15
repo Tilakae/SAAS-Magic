@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    // overflow: auto;
+}
+$pcolor: #272727;
+$scolor:#ff852f;
+$fontweights:(
+    'regular':400,
+    'semibold':600,
+    'medium':500,
+    'bold':800
+);
+$larger:3rem;
+$large:2.5rem;
+$medium:2rem;
+$normal:1.5rem;
+$para:1rem;
+$small:.900rem;
+$smaller:.7rem;
+@function set-text-color($color){
+    @if (lightness($color)>40%) {
+@return #000;        
+    } @else {
+        @return #fff;
+    }
+}
+@mixin media-md {
+    @media screen and (min-width:768px){
+        @content;
+    }
+}
+@mixin media-mc {
+    @media screen and (min-width:1024px){
+        @content;
+    }
+}
+@mixin media-mb {
+    @media screen and (min-width:1600px){
+        @content;
+    }
+}
+@mixin media-small{
+    @media screen and (max-width: 550px){
+        @content;
+    }
+}
